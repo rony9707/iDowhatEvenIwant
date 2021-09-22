@@ -1,0 +1,21 @@
+<div class="header">
+    <div class="site-title">
+        <!-- <logo class="logo"></logo> -->
+        <h1>{{siteTitle}}</h1>
+    </div>
+    <p class="subtitle">{{subTitle}}</p>
+    <ul class="navbar-list">
+        <li class="navbar-list-item">
+            <button routerLink="" class="navbar-list-btn" routerLinkActive="current-page" [routerLinkActiveOptions]="{ exact: true }">Home</button>
+        </li>
+
+        <li class="navbar-list-item">
+            <button routerLink="/aboutme" class="navbar-list-btn" routerLinkActive="current-page" [routerLinkActiveOptions]="{ exact: true }">About me</button>
+        </li>
+
+        <li class="navbar-list-item">
+            <button routerLink="/feedback" class="navbar-list-btn" routerLinkActive="current-page" [routerLinkActiveOptions]="{ exact: true }">Feedback</button>
+        </li>
+
+    </ul>
+</div>

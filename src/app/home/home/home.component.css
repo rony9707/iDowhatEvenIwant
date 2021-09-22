@@ -1,0 +1,156 @@
+.background {
+    background-color: #ffbe76;
+}
+
+.container-flex {
+    width: 100%;
+    display: flex;
+}
+
+
+/* .main-div {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 2px 5px 0px;
+    background-color: #2f3542;
+    border-radius: 4px;
+} */
+
+
+/* Main Content */
+
+.main-div {
+    margin: 0;
+    padding: 0;
+}
+
+.main-sub {
+    width: 100%;
+    margin: 5px 2px 0px 2px;
+    /* background-color: #2f3542; */
+    border-radius: 4px;
+}
+
+.main-img {
+    width: 100%;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    border: 7px solid #2f3542;
+}
+
+
+/* Side Content */
+
+.sidebar {
+    margin: 5px;
+}
+
+.sidebar-sub {
+    background-color: #2d3436;
+    padding: 5px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.social-media {
+    margin: 5px 0px 5px 0px;
+    background-color: #495057;
+    border-radius: 4px;
+    padding: 3px;
+    width: 100%;
+}
+
+.social-media-name {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.social-media-img {
+    width: 45px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.social-media-body {
+    color: #000000;
+    font-size: 20px;
+}
+
+.social-media-value {
+    font-size: 20px;
+}
+
+.social-table {
+    display: flex;
+    justify-content: center;
+    color: #ced4da;
+}
+
+@media( max-width:992px) {
+    .container-flex {
+        flex-direction: column;
+    }
+    .sidebar-sub {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+    }
+    .social-media {
+        justify-content: space-between;
+        flex-flow: wrap;
+    }
+}
+
+@media( max-width:770px) {
+    .sidebar-sub {
+        background-color: #2d3436;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .social-media {
+        width: 100%;
+        margin: 2px 5px 2px 5px;
+    }
+    .social-media-img {
+        width: 23px;
+    }
+    .social-media-name {
+        font-size: 1rem;
+    }
+    .social-media-body {
+        font-size: .75rem;
+    }
+    .social-media-value {
+        font-size: .75rem;
+    }
+    .container-flex {
+        flex-direction: column;
+    }
+    .sidebar-sub {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media( max-width:292px) {
+    .social-media {
+        width: 100%;
+        margin: 1px 5px 1px 5px;
+    }
+    .social-media-img {
+        width: 16px;
+    }
+    .social-media-name {
+        font-size: .75em;
+    }
+    .social-media-body {
+        font-size: .35em;
+    }
+    .social-media-value {
+        font-size: .35em;
+    }
+}

@@ -1,0 +1,56 @@
+<div id="blur">
+    <header></header>
+    <main-dashboard></main-dashboard>
+
+    <!--Login Component-->
+
+    <div class="container">
+        <div class="sub-container">
+            <div class="form-title">
+                <h3>Login Form</h3>
+            </div>
+            <form class="form" [formGroup]="loginForm" (ngSubmit)="validateForm(username.value)">
+                <div class="form-components valid-text">
+                    <input type="text" class="form-fields" formControlName="username" #username id="username" name="username" placeholder="Enter your username" maxlength="20">
+                    <span class="valid-text" *ngIf="userName && userName.invalid && userName.touched">Username is not valid</span>
+                </div>
+                <div class="form-components valid-text">
+                    <input type="password" class="form-fields" formControlName="password" id="password" name="password" placeholder="Enter your password" matTooltip="Password must be between 8 to 16 characters, must have at least one lowercase character, one uppercase character, one number and one special character"
+                        matTooltipPosition=after matTooltipShowDelay=200>
+                    <span class="valid-text" *ngIf="password && password.invalid && password.touched">Password is not valid</span>
+                </div>
+                <div class="form-components forgot-password">
+                    <a class="forgot-password-link" (click)="openModal()">Forgot Password!!</a>
+                </div>
+                <div class="form-components">
+                    <button [disabled]="loginForm.invalid" type="submit" class="submit-btn">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!--footer component-->
+    <footer></footer>
+</div>
+
+
+<!--Modal Section-->
+<div class="container" id="popup">
+    <div class="sub-container">
+        <div class="form-title">
+            <h3>Forgot Password</h3>
+        </div>
+        <form class="form" [formGroup]="forgotPasswordForm" (ngSubmit)="collectDataForgotPassword()">
+            <div class="form-components">
+                <input type="email" class="form-fields" formControlName="email" name="email" placeholder="Enter your Email">
+            </div>
+            <div class="form-components">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+        <div class="popupclose">
+            <a class="forgot-password-link" (click)="openModal()">Close</a>
+        </div>
+    </div>
+</div>

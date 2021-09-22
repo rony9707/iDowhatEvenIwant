@@ -1,0 +1,11 @@
+<!--Dashboard-->
+<div class="dashboard">
+    <div class="show-time">
+        <button class="back-btn" (click)="back()">Back</button>
+        <span class="time">Time: {{date | date: 'hh:mm:ss a'}} </span>
+    </div>
+    <div class="auth-btn">
+        <button class="login-btn" routerLink="/login">Login</button>
+        <button class="register-btn" routerLink="/register">Register</button>
+    </div>
+</div>
